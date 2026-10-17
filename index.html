@@ -2,44 +2,118 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07111f">
-<title>Project 2026 — Cruise Ship Simulator Research</title>
+<meta name="description" content="Independent research dashboard tracking public evidence about Project 2026 and Roblox Cruise Ship Simulator.">
+<title>Project 2026 | Cruise Ship Simulator Research Desk</title>
 <style>
-:root{color-scheme:dark;--bg:#07111f;--line:#263c56;--text:#edf5ff;--muted:#a8bbd1;--cyan:#53d9ff;--amber:#ffd166;--red:#ff8989}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#123052 0%,var(--bg) 55%);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text)}main{max-width:1000px;margin:auto;padding:28px 18px 50px}.top{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.13em;font-size:.78rem;text-transform:uppercase}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--muted);font-size:.82rem}h1{font-size:clamp(2rem,7vw,4rem);line-height:1.04;margin:22px 0 12px;letter-spacing:-.04em}h1 span{color:var(--cyan)}.intro{color:var(--muted);max-width:720px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin-top:24px}.card{background:linear-gradient(155deg,#142841,#0c192a);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}.card h2{font-size:1rem;margin:0 0 10px}.answer{font-size:1.25rem;font-weight:850;margin:0 0 8px}.unknown{color:var(--amber)}.muted{color:var(--muted);font-size:.92rem}.wide{margin-top:14px}.timeline{display:grid;gap:12px}.event{border-left:2px solid var(--cyan);padding:2px 0 3px 14px}.event strong{display:block}.notice{border:1px solid #806b34;background:#2a2518;border-radius:14px;padding:15px;color:#ffebbb;margin-top:18px}.links a{color:var(--cyan);overflow-wrap:anywhere}.small{font-size:.8rem;color:var(--muted)}button{background:var(--cyan);color:#06111e;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;margin:4px 5px 4px 0}button.secondary{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}footer{margin-top:28px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.85rem}ul{padding-left:20px}.yesno{display:inline-block;padding:4px 9px;border:1px solid #806b34;border-radius:8px;color:var(--amber);font-weight:800}
+:root{color-scheme:dark;--bg:#07111f;--panel:#102238;--panel2:#0b192a;--line:#29425e;--text:#eef6ff;--muted:#a9bdd2;--cyan:#53d9ff;--gold:#ffd166;--red:#ff9292;--green:#8be0b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#183c5c 0,var(--bg) 56%);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text)}a{color:var(--cyan);overflow-wrap:anywhere}main{max-width:1120px;margin:auto;padding:22px 16px 52px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.eyebrow{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);font-weight:850}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:var(--muted);font-size:.8rem}h1{font-size:clamp(2.5rem,8vw,5rem);line-height:.99;letter-spacing:-.055em;margin:28px 0 16px}h1 span{color:var(--cyan)}h2{font-size:1.12rem;margin:0 0 10px}h3{font-size:.98rem;margin:0 0 6px}.lead{max-width:780px;color:var(--muted);font-size:1.05rem}.card{background:linear-gradient(150deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;padding:19px;min-width:0}.hero{margin-top:24px;border-color:#4b6c87}.heroStatus{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}.bigStatus{font-size:clamp(1.6rem,5vw,2.5rem);font-weight:900;letter-spacing:-.03em;color:var(--gold);line-height:1.15}.muted{color:var(--muted)}.small{font-size:.82rem;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:13px;margin-top:14px}.status{font-size:1.05rem;font-weight:850;margin:5px 0 8px}.pending{color:var(--gold)}.confirmed{color:var(--green)}.no{color:var(--red)}.section{margin-top:26px}.sectionTitle{font-size:1.45rem;letter-spacing:-.025em;margin:0 0 12px}.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:850}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}.list{padding-left:20px;margin:8px 0}.list li{margin:7px 0}.notice{margin-top:14px;border:1px solid #806b34;background:#292516;color:#ffedbb;border-radius:14px;padding:15px}.info{border-left:3px solid var(--cyan);padding-left:13px}.timeline{display:grid;gap:13px}.event{border-left:2px solid var(--cyan);padding-left:14px}.event strong{display:block}.source{border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:10px}.source p{margin:4px 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}button{font:inherit;font-weight:800;background:var(--cyan);color:#06111e;border:0;border-radius:10px;padding:10px 13px;cursor:pointer}button.secondary{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}input{width:100%;background:#07111f;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:11px;font:inherit}label{display:block;font-size:.88rem;margin:12px 0 6px}.tableWrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:540px}th,td{text-align:left;vertical-align:top;padding:11px;border-bottom:1px solid var(--line)}th{color:var(--cyan);font-size:.82rem}footer{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;color:var(--muted);font-size:.84rem}.tag{display:inline-block;border:1px solid var(--line);border-radius:7px;padding:2px 7px;font-size:.75rem;color:var(--muted)}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body><main>
-<div class="top"><div class="eyebrow">Independent community research</div><div class="pill">Page reviewed: October 17, 2026</div></div>
+<header>
+<div class="top"><div class="eyebrow">Independent public-source research</div><div class="pill">Dashboard date: October 17, 2026</div></div>
 <h1>PROJECT <span>2026</span><br>Research Desk</h1>
-<p class="intro">An evidence-based tracker investigating whether Tableboard Studios, the developers of Roblox <em>Cruise Ship Simulator</em>, have announced “Project 2026,” begun internal testing, or reached final testing.</p>
-<div class="card wide"><h2>Direct yes-or-no answer</h2><p class="answer unknown">IS IT CONFIRMED? <span class="yesno">NOT CONFIRMED</span></p><p class="muted">Based on the evidence recorded on this page, we cannot responsibly answer “Yes.” This is not proof the project does not exist; it means a reliable public confirmation has not been verified here.</p></div>
-<div class="grid">
-<section class="card"><h2>Is Project 2026 being made?</h2><p class="answer unknown">UNCONFIRMED</p><p class="muted">No verifiable official announcement is attached to this report.</p></section>
-<section class="card"><h2>Are developers testing internally?</h2><p class="answer unknown">NOT PUBLICLY VERIFIED</p><p class="muted">Private development activity cannot be established from rumors or a search page alone.</p></section>
-<section class="card"><h2>Is internal testing being finalized?</h2><p class="answer unknown">NOT PUBLICLY VERIFIED</p><p class="muted">No verified evidence confirms final testing, completion, or a release date.</p></section>
-<section class="card"><h2>Release date / features</h2><p class="answer">Not confirmed</p><p class="muted">No release month, feature list, or progress percentage is invented on this dashboard.</p></section>
-</div>
-<section class="card wide"><h2>Evidence checklist</h2><p class="muted">Change the status only when a source directly supports the claim. These controls update this page locally; they do not verify claims or publish changes to GitHub.</p>
-<ul><li>Official developer announcement or verified social post</li><li>Dated update from a developer associated with Cruise Ship Simulator</li><li>Public test announcement or official release notes</li><li>Source URL and date recorded for every status change</li></ul>
-<label for="sourceUrl">Evidence source URL (optional)</label><br><input id="sourceUrl" type="url" placeholder="https://..." style="width:100%;padding:11px;margin:8px 0 12px;border-radius:9px;border:1px solid #263c56;background:#07111f;color:#edf5ff">
-<div><button id="markYes">Mark publicly confirmed YES</button><button id="markNo" class="secondary">Mark publicly confirmed NO</button><button id="markUnknown" class="secondary">Return to UNCONFIRMED</button></div><p id="statusMessage" class="muted" aria-live="polite">Current verdict: UNCONFIRMED. Select a verdict only after checking reliable evidence.</p>
+<p class="lead">A detailed evidence tracker for the question: Are Tableboard Studios, associated with Roblox <em>Cruise Ship Simulator</em>, making a project called “Project 2026”? Are they testing it internally, and are they in final testing?</p>
+</header>
+
+<section class="card hero" aria-labelledby="verdictTitle">
+<div class="kicker">Current evidence-based verdict</div>
+<h2 id="verdictTitle">Can we confirm YES?</h2>
+<div class="heroStatus"><div class="bigStatus" id="mainVerdict">NOT CONFIRMED</div><div class="muted" style="flex:1;min-width:220px">A “YES” requires a reliable public source directly confirming the project. No such source has been verified and documented in this dashboard. This means “not confirmed,” not “definitely no.”</div></div>
+<div class="notice"><strong>Accuracy rule:</strong> This dashboard will not present rumors, guesses, possible features, or private testing as established facts. A search link by itself is not proof.</div>
 </section>
-<section class="card wide"><h2>Research log</h2><div class="timeline"><div class="event"><strong>October 17, 2026 — Dashboard updated</strong><span class="muted">Added a direct yes-or-no verdict, separate testing statuses, and a source checklist. No independent confirmation of Project 2026 or private testing is claimed.</span></div><div class="event"><strong>What would change the verdict?</strong><span class="muted">A dated official statement or credible evidence that directly confirms or denies the project.</span></div></div></section>
-<div class="notice"><strong>Important:</strong> “Unconfirmed” is not the same as “No.” Internal testing may be confidential. A status control is only a note for your research and does not validate the source or change this GitHub file automatically.</div>
-<section class="card wide links"><h2>Sources to check</h2><p><a href="https://www.roblox.com/search/experiences?keyword=Cruise%20Ship%20Simulator" target="_blank" rel="noopener">Search Roblox experiences for Cruise Ship Simulator</a></p><p><a href="https://www.google.com/search?q=Tableboard+Studios+Cruise+Ship+Simulator+Project+2026" target="_blank" rel="noopener">Search the web for Tableboard Studios + Project 2026</a></p><p><a href="https://www.roblox.com/" target="_blank" rel="noopener">Roblox official website</a></p><p class="small">These links are research starting points, not proof of an announcement. Verify the developer identity, publication date, and original source.</p></section>
-<section class="card wide"><h2>Research tools</h2><button id="searchBtn">Search latest public updates</button><button id="copyBtn" class="secondary">Copy status summary</button><p id="feedback" class="small" aria-live="polite"></p></section>
-<footer>Independent fan research page. Not affiliated with or endorsed by Tableboard Studios or Roblox. Statuses are based on evidence actually verified by the researcher. The page does not automatically access private developer information or continuously monitor the web.</footer>
+
+<section class="grid" aria-label="Status overview">
+<article class="card"><div class="kicker">Question 1</div><h2>Is Project 2026 being developed?</h2><div class="status pending" id="projectStatus">UNCONFIRMED</div><p class="muted">No verified official announcement is currently recorded here.</p></article>
+<article class="card"><div class="kicker">Question 2</div><h2>Is internal testing underway?</h2><div class="status pending">NOT PUBLICLY VERIFIED</div><p class="muted">Internal tests may be private; outsiders cannot confirm them without trustworthy evidence.</p></article>
+<article class="card"><div class="kicker">Question 3</div><h2>Is testing being finalized?</h2><div class="status pending">NOT PUBLICLY VERIFIED</div><p class="muted">No verified statement confirms a final testing stage or test completion.</p></article>
+<article class="card"><div class="kicker">Question 4</div><h2>Release date and launch window</h2><div class="status pending">NOT ANNOUNCED HERE</div><p class="muted">No month, date, countdown, or launch promise is invented.</p></article>
+</section>
+
+<section class="section" id="details">
+<h2 class="sectionTitle">Detailed status report</h2>
+<div class="two">
+<article class="card"><h2>What can be said right now?</h2><ul class="list"><li>The question is being tracked as an independent fan research project.</li><li>The current verdict is “unconfirmed” because this page has no verified official announcement attached.</li><li>The status of private developer work, internal builds, and internal QA is unknown from public evidence recorded here.</li><li>Only dated, attributable evidence should change the verdict.</li></ul></article>
+<article class="card"><h2>What cannot responsibly be claimed?</h2><ul class="list"><li>That developers definitely said yes or no when no direct source is available.</li><li>That a private test is happening or almost finished.</li><li>A release month, feature count, progress percentage, ship list, or launch date without evidence.</li><li>That the absence of a public post proves the project does not exist.</li></ul></article>
+</div>
+</section>
+
+<section class="section">
+<h2 class="sectionTitle">Feature watchlist — ideas to verify, not confirmed features</h2>
+<p class="muted">The following are research topics only. They must not be treated as promised Project 2026 features unless an official source confirms them.</p>
+<div class="grid">
+<article class="card"><h3>Ships and fleet</h3><p class="muted">Potential ship additions, exterior/interior updates, ship selection, docking, and vessel handling.</p><span class="tag">Unverified idea</span></article>
+<article class="card"><h3>Navigation and ocean</h3><p class="muted">Potential steering, waves, weather effects, route systems, port approaches, and tugboat mechanics.</p><span class="tag">Unverified idea</span></article>
+<article class="card"><h3>Safety and announcements</h3><p class="muted">Potential muster drill, PA announcements, alarms, passenger guidance, and emergency procedures.</p><span class="tag">Unverified idea</span></article>
+<article class="card"><h3>Environment and lighting</h3><p class="muted">Potential day/night cycle, lighting improvements, rain, clouds, storms, and visual effects.</p><span class="tag">Unverified idea</span></article>
+<article class="card"><h3>Performance and UI</h3><p class="muted">Potential mobile optimization, interface improvements, loading stability, and quality-of-life changes.</p><span class="tag">Unverified idea</span></article>
+<article class="card"><h3>Multiplayer and roles</h3><p class="muted">Potential crew roles, passenger interactions, progression, and multiplayer systems.</p><span class="tag">Unverified idea</span></article>
+</div>
+</section>
+
+<section class="section">
+<h2 class="sectionTitle">Testing-stage tracker</h2>
+<div class="card tableWrap"><table><thead><tr><th>Stage</th><th>What would count as evidence?</th><th>Current record</th></tr></thead><tbody>
+<tr><td>Project announcement</td><td>Official developer post, announcement, or verified update naming the project.</td><td class="pending">Unconfirmed</td></tr>
+<tr><td>Prototype / active development</td><td>Direct developer statement or credible public development demonstration.</td><td class="pending">Not verified</td></tr>
+<tr><td>Internal testing</td><td>Developer-confirmed test information; private activity cannot be inferred.</td><td class="pending">Not publicly verified</td></tr>
+<tr><td>Final testing / release candidate</td><td>Explicit statement that final testing or release-candidate checks are underway.</td><td class="pending">Not publicly verified</td></tr>
+<tr><td>Release / launch</td><td>Official release announcement or published update with a date.</td><td class="pending">Not verified</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section">
+<h2 class="sectionTitle">Evidence log and source entry</h2>
+<div class="card">
+<p class="muted">Use this form to create a local research note. It does not independently verify a claim and does not automatically save data to GitHub. Do not mark a claim confirmed unless the source directly supports it.</p>
+<label for="claim">Claim being checked</label>
+<input id="claim" value="Tableboard Studios is developing Project 2026">
+<label for="sourceUrl">Direct source URL</label>
+<input id="sourceUrl" type="url" placeholder="https://official-source.example/post">
+<label for="sourceDate">Source publication date</label>
+<input id="sourceDate" type="date">
+<label for="sourceType">Source type</label>
+<select id="sourceType" style="width:100%;background:#07111f;color:#eef6ff;border:1px solid #29425e;border-radius:9px;padding:11px;font:inherit"><option>Official developer announcement</option><option>Verified developer social post</option><option>Roblox experience update / description</option><option>Community post (needs corroboration)</option><option>Other / not yet assessed</option></select>
+<label for="notes">Evidence notes (what exactly does it say?)</label>
+<input id="notes" placeholder="Quote or summarize the relevant statement">
+<div class="actions"><button id="addEvidence">Add note to on-page log</button><button id="clearForm" class="secondary">Clear form</button></div>
+<p id="formMessage" class="small" aria-live="polite">No new source has been added in this session.</p>
+<div id="evidenceLog" class="timeline" style="margin-top:15px"><div class="event"><strong>October 17, 2026 — Baseline record</strong><span class="muted">No official Project 2026 confirmation or testing statement has been verified in this dashboard.</span></div></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="sectionTitle">Public research links</h2>
+<div class="two">
+<article class="card"><h2>Roblox search</h2><p class="muted">Look for the experience and any update text or developer-linked announcement.</p><p><a href="https://www.roblox.com/search/experiences?keyword=Cruise%20Ship%20Simulator" target="_blank" rel="noopener noreferrer">Search Roblox experiences</a></p></article>
+<article class="card"><h2>Web search</h2><p class="muted">Search for the exact project name and the studio name; inspect original sources rather than snippets alone.</p><p><a href="https://www.google.com/search?q=%22Tableboard+Studios%22+%22Project+2026%22" target="_blank" rel="noopener noreferrer">Search exact phrase</a></p></article>
+<article class="card"><h2>Broader web search</h2><p class="muted">Use alternate wording and check dates to avoid confusing unrelated projects.</p><p><a href="https://www.google.com/search?q=Roblox+Cruise+Ship+Simulator+Tableboard+Studios+updates" target="_blank" rel="noopener noreferrer">Search game updates</a></p></article>
+<article class="card"><h2>Repository</h2><p class="muted">This dashboard is a community-made research page, not a developer source.</p><p><a href="https://github.com/Zephplays134/Elevator202" target="_blank" rel="noopener noreferrer">Open Elevator202 on GitHub</a></p></article>
+</div>
+</section>
+
+<section class="section">
+<h2 class="sectionTitle">Research tools</h2>
+<div class="card"><p class="muted">Open a fresh search or copy the current evidence-based status. Search results must still be checked manually; this static page does not run continuous monitoring.</p><div class="actions"><button id="searchBtn">Search latest public updates</button><button id="copyBtn" class="secondary">Copy status summary</button><button id="printBtn" class="secondary">Print / save as PDF</button></div><p id="toolMessage" class="small" aria-live="polite"></p></div>
+</section>
+
+<footer><strong>Transparency and limitations</strong><br>Independent fan research. Not affiliated with, endorsed by, or speaking for Tableboard Studios or Roblox. “Unconfirmed” is not equivalent to “No.” Internal testing is private unless publicly disclosed. This website does not access private developer systems, inspect unpublished builds, or automatically monitor social platforms. The source form is temporary browser-page state and is not persisted to GitHub. Always check original sources, author identity, and publication date.</footer>
 </main>
 <script>
-let verdict='UNCONFIRMED';
-const summary=()=> 'Project 2026: '+verdict+'. Internal testing: NOT PUBLICLY VERIFIED. Final internal testing: NOT PUBLICLY VERIFIED. Confirm only with reliable, dated public evidence.';
-const msg=document.getElementById('statusMessage');
-function setVerdict(v){const url=document.getElementById('sourceUrl').value.trim();if(v!=='UNCONFIRMED'&&!url){msg.textContent='Please enter the URL of the evidence first. The status has not changed.';return}if(v!=='UNCONFIRMED'&&!/^https?:\/\//i.test(url)){msg.textContent='Please enter a valid http:// or https:// source URL.';return}verdict=v;msg.textContent='Local research note updated to '+v+(url?' — source entered: '+url:'')+'. This is not independently verified and is not saved to GitHub.';document.querySelector('.yesno').textContent=v;document.querySelector('.answer.unknown').firstChild.textContent='IS IT CONFIRMED? ';}
-document.getElementById('markYes').addEventListener('click',()=>setVerdict('YES — SOURCE ENTERED, VERIFY IT'));
-document.getElementById('markNo').addEventListener('click',()=>setVerdict('NO — SOURCE ENTERED, VERIFY IT'));
-document.getElementById('markUnknown').addEventListener('click',()=>{verdict='UNCONFIRMED';document.querySelector('.yesno').textContent=verdict;msg.textContent='Current verdict: UNCONFIRMED.'});
-document.getElementById('searchBtn').addEventListener('click',()=>window.open('https://www.google.com/search?q='+encodeURIComponent('Tableboard Studios Cruise Ship Simulator Project 2026 latest update'),'_blank','noopener'));
-document.getElementById('copyBtn').addEventListener('click',async()=>{const f=document.getElementById('feedback');try{await navigator.clipboard.writeText(summary());f.textContent='Status summary copied.'}catch(e){f.textContent=summary()}});
-</script></body></html>
+const byId=id=>document.getElementById(id);
+byId('addEvidence').addEventListener('click',()=>{
+ const claim=byId('claim').value.trim(),url=byId('sourceUrl').value.trim(),date=byId('sourceDate').value,kind=byId('sourceType').value,notes=byId('notes').value.trim();
+ if(!claim||!url||!/^https?:\/\//i.test(url)){byId('formMessage').textContent='Enter a claim and a valid http:// or https:// source URL.';return}
+ const item=document.createElement('div');item.className='event';
+ const title=document.createElement('strong');title.textContent=(date||'Date not supplied')+' — '+claim;
+ const detail=document.createElement('span');detail.className='muted';detail.textContent=kind+' · '+(notes||'No evidence notes supplied')+' · Source: '+url;
+ item.append(title,detail);byId('evidenceLog').prepend(item);byId('formMessage').textContent='Research note added to this page only. It is not independently verified and will disappear when the page is reloaded.'; 
+});
+byId('clearForm').addEventListener('click',()=>{byId('sourceUrl').value='';byId('sourceDate').value='';byId('notes').value='';byId('formMessage').textContent='Form cleared.'});
+byId('searchBtn').addEventListener('click',()=>window.open('https://www.google.com/search?q='+encodeURIComponent('"Tableboard Studios" "Cruise Ship Simulator" "Project 2026" latest'),'_blank','noopener,noreferrer'));
+byId('copyBtn').addEventListener('click',async()=>{const text='Project 2026 verdict: NOT CONFIRMED. Internal testing: NOT PUBLICLY VERIFIED. Final testing: NOT PUBLICLY VERIFIED. No verified official source is recorded on this dashboard. Unconfirmed does not mean definitely no.';try{await navigator.clipboard.writeText(text);byId('toolMessage').textContent='Status summary copied.'}catch(e){byId('toolMessage').textContent=text}});
+byId('printBtn').addEventListener('click',()=>window.print());
+</script>
+</body></html>

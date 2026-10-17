@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>Project 2026 — Cruise Ship Simulator Research</title>
+<style>
+:root{color-scheme:dark;--bg:#07111f;--panel:#101f33;--line:#263c56;--text:#edf5ff;--muted:#a8bbd1;--cyan:#53d9ff;--amber:#ffd166}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#123052 0%,var(--bg) 55%);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text)}main{max-width:1000px;margin:auto;padding:28px 18px 50px}.top{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.13em;font-size:.78rem;text-transform:uppercase}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--muted);font-size:.82rem}h1{font-size:clamp(2rem,7vw,4rem);line-height:1.04;margin:22px 0 12px;letter-spacing:-.04em}h1 span{color:var(--cyan)}.intro{color:var(--muted);max-width:720px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin-top:24px}.card{background:linear-gradient(155deg,#142841,#0c192a);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}.card h2{font-size:1rem;margin:0 0 10px}.answer{font-size:1.3rem;font-weight:850;margin:0 0 8px}.unknown{color:var(--amber)}.muted{color:var(--muted);font-size:.92rem}.wide{margin-top:14px}.timeline{display:grid;gap:12px}.event{border-left:2px solid var(--cyan);padding:2px 0 3px 14px}.event strong{display:block}.notice{border:1px solid #806b34;background:#2a2518;border-radius:14px;padding:15px;color:#ffebbb;margin-top:18px}.links a{color:var(--cyan);overflow-wrap:anywhere}.small{font-size:.8rem;color:var(--muted)}button{background:var(--cyan);color:#06111e;border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}footer{margin-top:28px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body><main>
+<div class="top"><div class="eyebrow">Independent community research</div><div class="pill">Last reviewed: <span id="reviewDate">October 17, 2026</span></div></div>
+<h1>PROJECT <span>2026</span><br>Research Desk</h1>
+<p class="intro">A source-conscious tracker investigating whether Tableboard Studios, the developers of Roblox <em>Cruise Ship Simulator</em>, have announced a “Project 2026.” This page separates confirmed public information from claims that cannot currently be verified.</p>
+<div class="grid">
+<section class="card"><h2>Is Project 2026 confirmed?</h2><p class="answer unknown" id="confirmed">UNCONFIRMED</p><p class="muted">No reliable public announcement is cited on this dashboard. That does not prove the project does not exist.</p></section>
+<section class="card"><h2>Are developers testing internally?</h2><p class="answer unknown">NOT PUBLICLY VERIFIED</p><p class="muted">Private testing cannot be confirmed without a statement or other credible public evidence from the developers.</p></section>
+<section class="card"><h2>Is internal testing being finalized?</h2><p class="answer unknown">NOT PUBLICLY VERIFIED</p><p class="muted">No verified public evidence here confirms a final testing phase, completion date, or release window.</p></section>
+<section class="card"><h2>Latest status</h2><p class="answer">Awaiting verifiable sources</p><p class="muted">No fabricated progress percentage, release month, feature list, or insider status is shown.</p></section>
+</div>
+<section class="card wide"><h2>Research log</h2><div class="timeline">
+<div class="event"><strong>October 17, 2026 — Dashboard initialized</strong><span class="muted">Starting status: unconfirmed. No developer announcement or independently verifiable testing evidence has been attached to this report.</span></div>
+<div class="event"><strong>What would change the status?</strong><span class="muted">A dated official announcement, developer post, public test announcement, or credible update that can be checked directly.</span></div>
+</div></section>
+<div class="notice"><strong>Important:</strong> “Unconfirmed” is not the same as “No.” Public sources cannot reliably reveal confidential internal development or testing. Treat rumors and unsourced claims as unverified.</div>
+<section class="card wide links"><h2>Sources to check</h2><p><a href="https://www.roblox.com/games/255950781/Seaport-Middle-School-RP#!/about" target="_blank" rel="noopener">Roblox game link previously associated with community research</a></p><p><a href="https://www.roblox.com/search/experiences?keyword=Cruise%20Ship%20Simulator" target="_blank" rel="noopener">Search Roblox experiences for Cruise Ship Simulator</a></p><p><a href="https://www.google.com/search?q=Tableboard+Studios+Cruise+Ship+Simulator+Project+2026" target="_blank" rel="noopener">Search the web for Tableboard Studios + Project 2026</a></p><p class="small">These are research starting points, not proof of an announcement. Confirm developer identity and date before updating the status.</p></section>
+<section class="card wide"><h2>Update this dashboard</h2><p class="muted">Use this button to open a web search for fresh public evidence. The page does not claim to monitor the web automatically.</p><button id="searchBtn">Search latest public updates</button> <button id="copyBtn" type="button">Copy status summary</button><p id="feedback" class="small" aria-live="polite"></p></section>
+<footer>Independent fan research page. Not affiliated with or endorsed by Tableboard Studios or Roblox. Status is based only on evidence entered into this page. A later date alone does not mean an update has been verified.</footer>
+</main>
+<script>
+const summary='Project 2026 status: UNCONFIRMED. Internal testing: NOT PUBLICLY VERIFIED. Final internal testing: NOT PUBLICLY VERIFIED. No verified public evidence is recorded on this dashboard.';
+document.getElementById('searchBtn').addEventListener('click',()=>window.open('https://www.google.com/search?q='+encodeURIComponent('Tableboard Studios Cruise Ship Simulator Project 2026 latest update'),'_blank','noopener'));
+document.getElementById('copyBtn').addEventListener('click',async()=>{const f=document.getElementById('feedback');try{await navigator.clipboard.writeText(summary);f.textContent='Status summary copied.'}catch(e){f.textContent=summary}});
+</script></body></html>

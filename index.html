@@ -294,4 +294,67 @@ byId('printBtn').addEventListener('click',()=>window.print());
   <p style="font-size:.86rem;color:#a9bdd2;line-height:1.7;margin-top:20px">Evidence reviewed on October 17, 2026. The official Roblox pages are the primary destinations; public directory copies are secondary references. Roblox pages may not expose all content to automated readers. This is a fan-made research dashboard and is not affiliated with Tableboard Studios.</p>
 </section>
 
+
+<!-- UI refresh add-on: official community cross-check and claim/evidence separation -->
+<style>
+#p26-live-panel{max-width:1100px;margin:28px auto;padding:clamp(16px,4vw,28px);border:1px solid #36516d;border-radius:22px;background:radial-gradient(ellipse at 100% 0%,#183c5c 0,transparent 48%),#081525;color:#eef6ff}
+#p26-live-panel *{box-sizing:border-box}
+#p26-live-panel .p26-label{font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:#65dcff;font-weight:850}
+#p26-live-panel .p26-title{font-size:clamp(1.65rem,5vw,2.6rem);line-height:1.1;letter-spacing:-.04em;margin:8px 0 12px}
+#p26-live-panel .p26-intro{color:#b5c8dc;line-height:1.7;max-width:850px}
+#p26-live-panel .p26-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:12px;margin:18px 0}
+#p26-live-panel .p26-card{background:#102238;border:1px solid #29425e;border-radius:15px;padding:16px;min-width:0}
+#p26-live-panel .p26-state{font-weight:900;font-size:1.08rem;margin:8px 0}
+#p26-live-panel .p26-green{color:#8be0b0}#p26-live-panel .p26-gold{color:#ffd166}#p26-live-panel .p26-muted{color:#b5c8dc;line-height:1.65}
+#p26-live-panel .p26-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+#p26-live-panel a{color:#65dcff;overflow-wrap:anywhere}
+#p26-live-panel .p26-banner{border:1px solid #806b34;background:#292516;border-radius:14px;padding:15px;line-height:1.7;margin:14px 0}
+#p26-live-panel .p26-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+#p26-live-panel button{font:inherit;font-weight:800;border:0;border-radius:10px;padding:11px 14px;background:#65dcff;color:#07111f;cursor:pointer}
+#p26-live-panel button.alt{background:transparent;border:1px solid #65dcff;color:#65dcff}
+#p26-live-panel button:focus-visible,#p26-live-panel a:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+#p26-live-panel .p26-foot{font-size:.84rem;color:#9eb2c9;line-height:1.7;margin-top:18px}
+</style>
+<section id="p26-live-panel" aria-labelledby="p26-live-heading">
+  <div class="p26-label">Interface refresh · Public-source status board</div>
+  <h2 class="p26-title" id="p26-live-heading">Project 2026 — claim verification center</h2>
+  <p class="p26-intro">The clearest supportable YES is that Project 2026 has been listed in public copies of Tableboard Studios' group description. The separate questions—whether developers are actively working on it, internally testing it, or finalizing tests—need their own direct evidence.</p>
+  <div class="p26-cards">
+    <article class="p26-card"><div class="p26-label">Project name listed?</div><div class="p26-state p26-green">YES — PUBLICLY LISTED</div><p class="p26-muted">Public directory copies have reproduced “Project 2026 (2026)” with “To be announced.” Check the official group page for the latest wording.</p></article>
+    <article class="p26-card"><div class="p26-label">Internal testing?</div><div class="p26-state p26-gold">CLAIMED · NOT VERIFIED</div><p class="p26-muted">The supplied Gemini screenshot says testing is underway. An AI answer screenshot is not direct developer confirmation.</p></article>
+    <article class="p26-card"><div class="p26-label">Finalizing tests?</div><div class="p26-state p26-gold">NOT PUBLICLY VERIFIED</div><p class="p26-muted">No reliable direct statement is recorded here confirming final QA, a release candidate, or test completion.</p></article>
+    <article class="p26-card"><div class="p26-label">Release timing?</div><div class="p26-state p26-gold">NO CONFIRMED DATE</div><p class="p26-muted">The public listing wording does not establish a launch month or exact release date.</p></article>
+  </div>
+  <div class="p26-banner"><strong>Testing answer, stated precisely:</strong> The screenshot's claim is “YES, internal testing is underway,” but the public evidence available to this dashboard does not independently confirm that claim. To avoid inventing facts, the verified status remains <strong>NOT PUBLICLY VERIFIED</strong> until a direct studio/developer source confirms it.</div>
+  <h3>Official Roblox community pages</h3>
+  <div class="p26-links">
+    <article class="p26-card"><div class="p26-label">Primary community</div><h3>Tableboard Studios</h3><p class="p26-muted">Check the current About description, linked experiences, and announcements.</p><a href="https://www.roblox.com/communities/4795028/Tableboard-Studios#!/about" target="_blank" rel="noopener noreferrer">Open official Roblox community ↗</a></article>
+    <article class="p26-card"><div class="p26-label">Development community</div><h3>Tableboard Studios Development</h3><p class="p26-muted">Look for project posts and testing notices. Verify the group's relationship to the main studio rather than assuming it from the name alone.</p><a href="https://www.roblox.com/communities/7714371/Tableboard-Studios-Development#!/about" target="_blank" rel="noopener noreferrer">Open development community ↗</a></article>
+    <article class="p26-card"><div class="p26-label">Related experience</div><h3>Cruise Ship Simulator</h3><p class="p26-muted">The game's Roblox page identifies Tableboard Studios as creator. That connection does not, by itself, verify Project 2026 testing.</p><a href="https://www.roblox.com/games/17234598656/Cruise-Ship-Simulator" target="_blank" rel="noopener noreferrer">Open Roblox experience ↗</a></article>
+    <article class="p26-card"><div class="p26-label">Public listing reference</div><h3>Group description mirror</h3><p class="p26-muted">Secondary directories have reproduced the Project 2026 listing; always prefer the original Roblox page when accessible.</p><a href="https://www.rolimons.com/group/4795028" target="_blank" rel="noopener noreferrer">Open public group listing ↗</a></article>
+  </div>
+  <h3 style="margin-top:22px">What evidence would upgrade testing to confirmed YES?</h3>
+  <ul class="p26-muted" style="padding-left:22px">
+    <li>A dated announcement on an official studio channel explicitly saying internal testing or closed testing has started.</li>
+    <li>A verified developer post describing a test build or current testing phase.</li>
+    <li>For “final testing,” explicit wording such as final QA, release-candidate testing, or testing completion. General development wording is not enough.</li>
+    <li>A public beta or release date only when the studio announces one directly.</li>
+  </ul>
+  <div class="p26-actions"><button type="button" id="p26-open-main">Open Tableboard Studios</button><button type="button" class="alt" id="p26-copy-status">Copy current status</button><button type="button" class="alt" id="p26-print-board">Print / save as PDF</button></div>
+  <p id="p26-ui-message" class="p26-muted" role="status" aria-live="polite"></p>
+  <p class="p26-foot">Independent fan research only; not affiliated with Tableboard Studios or Roblox. This page does not access private developer systems, private builds, or internal test records. “Not publicly verified” does not mean “No.” The buttons above open a public source, copy the wording, or print this page; they do not perform live verification.</p>
+</section>
+<script>
+(function(){
+ const root=document.getElementById('p26-live-panel'); if(!root)return;
+ const msg=document.getElementById('p26-ui-message');
+ document.getElementById('p26-open-main').addEventListener('click',function(){window.open('https://www.roblox.com/communities/4795028/Tableboard-Studios#!/about','_blank','noopener,noreferrer');});
+ document.getElementById('p26-print-board').addEventListener('click',function(){window.print();});
+ document.getElementById('p26-copy-status').addEventListener('click',async function(){
+  const summary='Project 2026: YES — PUBLICLY LISTED in public copies of the Tableboard Studios group description. Internal testing: claimed by the supplied Gemini screenshot, but NOT independently publicly verified. Final testing: NOT publicly verified. Release date: not confirmed. Sources: https://www.roblox.com/communities/4795028/Tableboard-Studios#!/about and https://www.roblox.com/communities/7714371/Tableboard-Studios-Development#!/about';
+  try{await navigator.clipboard.writeText(summary);msg.textContent='Status summary copied.';}catch(e){msg.textContent=summary;}
+ });
+})();
+</script>
+
 </body></html>

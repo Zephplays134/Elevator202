@@ -6,7 +6,7 @@ A mobile-friendly public-information dashboard for tracking official public anno
 
 | Question | Status | What this means |
 |---|---|---|
-| Is Project 2026 publicly listed? | **Yes** | Public project listings have referenced Project 2026, with further details to be announced. |
+| Is Project 2026 currently confirmed on the official projects page? | **Not currently visible** | Earlier developer statements you shared described plans to work on it, but the currently accessible official projects page does not list Project 2026. |
 | Has internal testing started? | **Not publicly confirmed** | I cannot verify private internal testing from public sources. Do not mark this as a confirmed “Yes” without an explicit official developer statement. |
 | Is a release date confirmed? | **No public date verified** | Treat dates and launch windows as unannounced until Tableboard Studios confirms them. |
 | Are elevator types and ship systems confirmed? | **Not verified** | Elevators, PA systems, and other mechanics should be labeled planned or confirmed only when an official source says so. |

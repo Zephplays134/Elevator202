@@ -1,36 +1,311 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07111f">
-<title>Project 2026 — Status Monitor</title>
+<meta name="description" content="Project 2026 Status Monitor: internal testing confirmed YES. A fan-run tracker for Tableboard Studios' Project 2026 and Cruise Ship Simulator on Roblox.">
+<meta property="og:title" content="Project 2026: Internal testing YES, confirmed">
+<meta property="og:description" content="Status, timeline, studio info, Cruise Ship Simulator stats and sources for Tableboard Studios' Project 2026.">
+<title>Project 2026 Status Monitor: Internal testing YES</title>
 <style>
-:root{color-scheme:dark;--bg:#07111f;--panel:#101d30;--line:#263b55;--text:#edf5ff;--muted:#9db0c8;--blue:#70b7ff;--amber:#ffd27a;--green:#80e0b1}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#132b48 0,#07111f 55%);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:1050px;margin:auto;padding:30px 18px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.eyebrow{color:var(--blue);font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(2rem,6vw,3.7rem);line-height:1.05;margin:.5rem 0}h2{font-size:1.2rem;margin:0 0 12px}.sub{color:var(--muted);max-width:720px}.stamp{font-size:.82rem;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:26px 0}.card,.section{background:linear-gradient(145deg,#12233a,#0d192a);border:1px solid var(--line);border-radius:18px;padding:20px}.label{color:var(--muted);font-size:.88rem}.value{font-size:1.3rem;font-weight:750;margin:8px 0}.tag{display:inline-flex;border-radius:999px;padding:4px 10px;font-size:.76rem;font-weight:800;letter-spacing:.04em;background:#243247;color:#d9e8fb}.tag.amber{background:#45351d;color:var(--amber)}.tag.green{background:#163c31;color:var(--green)}.tag.blue{background:#173754;color:var(--blue)}.desc{color:var(--muted);font-size:.92rem}.section{margin-top:16px}.timeline{display:grid;gap:12px}.item{border-left:2px solid #355879;padding:2px 0 4px 14px}.item strong{display:block}.item p{margin:4px 0;color:var(--muted)}a{color:#91caff}a:hover{color:white}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.links a,button{border:1px solid #365472;background:#142a43;color:var(--text);padding:10px 13px;border-radius:10px;text-decoration:none;font:inherit;cursor:pointer}.links a:hover,button:hover{background:#1d3b5c}.notice{border-left:3px solid var(--amber);padding:10px 14px;background:#211d15;border-radius:8px;color:#eadfc9}.footer{color:var(--muted);font-size:.82rem;margin-top:24px}ul{padding-left:20px}li{margin:7px 0}
+:root{color-scheme:dark;--bg:#07111f;--panel:#101d30;--line:#263b55;--text:#edf5ff;--muted:#9db0c8;--blue:#70b7ff;--amber:#ffd27a;--green:#80e0b1;--red:#ff9a9a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html{background:#07111f}
+body{margin:0;background:radial-gradient(ellipse 120% 1400px at top,#132b48 0,#07111f 70%) no-repeat #07111f;color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1080px;margin:auto;padding:24px 16px 60px}
+a{color:#91caff}a:hover{color:#fff}
+.eyebrow{color:var(--blue);font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:.75rem}
+h1{font-size:clamp(2.1rem,7vw,3.8rem);line-height:1.04;margin:.4rem 0 .3rem}
+h2{font-size:1.25rem;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+h2 .num{font-size:.72rem;color:var(--blue);border:1px solid #2c4c6d;border-radius:6px;padding:2px 7px;font-weight:700}
+h3{font-size:1rem;margin:0 0 6px}
+.sub{color:var(--muted);max-width:740px;margin:0}
+.stamp{font-size:.82rem;color:var(--muted);margin-top:10px}
+nav.toc{position:sticky;top:0;z-index:5;margin:18px -16px 0;padding:10px 16px;background:rgba(7,17,31,.88);backdrop-filter:blur(8px);border-bottom:1px solid #1b2e46;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc a{flex:0 0 auto;font-size:.82rem;text-decoration:none;color:#cfe3fa;border:1px solid #2a4562;border-radius:999px;padding:5px 11px;background:#0f2034}
+nav.toc a:hover{background:#1b3655}
+.hero{margin-top:22px;border-radius:22px;padding:24px 20px;background:linear-gradient(135deg,#0f3b2d 0,#0e2a2a 45%,#0d1b2c 100%);border:1px solid #2d6b55;box-shadow:0 0 0 1px rgba(128,224,177,.08),0 20px 50px -25px rgba(128,224,177,.35);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(128,224,177,.22),transparent 70%)}
+.hero .q{color:#b9e9d3;font-weight:600;font-size:.95rem}
+.hero .big{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:8px 0 10px}
+.hero .yes{font-size:clamp(3rem,13vw,5.2rem);font-weight:900;line-height:1;color:var(--green);letter-spacing:-.02em}
+.dot{width:16px;height:16px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(128,224,177,.7);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(128,224,177,.6)}70%{box-shadow:0 0 0 14px rgba(128,224,177,0)}100%{box-shadow:0 0 0 0 rgba(128,224,177,0)}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}html{scroll-behavior:auto}}
+.hero .what{font-size:1.15rem;font-weight:700;margin:0 0 8px}
+.hero p{margin:6px 0;color:#d5efe3;max-width:760px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{display:inline-flex;align-items:center;border-radius:999px;padding:4px 10px;font-size:.72rem;font-weight:800;letter-spacing:.05em;background:#243247;color:#d9e8fb;white-space:nowrap}
+.tag.amber{background:#45351d;color:var(--amber)}.tag.green{background:#163c31;color:var(--green)}.tag.blue{background:#173754;color:var(--blue)}.tag.red{background:#3f1f24;color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:16px 0}
+.card,.section{background:linear-gradient(145deg,#12233a,#0d192a);border:1px solid var(--line);border-radius:18px;padding:18px}
+.section{margin-top:16px;scroll-margin-top:60px}
+.label{color:var(--muted);font-size:.85rem}
+.value{font-size:1.25rem;font-weight:750;margin:6px 0 8px}
+.desc{color:var(--muted);font-size:.9rem;margin:8px 0 0}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:720px){.kpis{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:#0c1828;border:1px solid #223650;border-radius:14px;padding:14px}
+.kpi .n{font-size:clamp(1.25rem,5vw,1.7rem);font-weight:800;font-variant-numeric:tabular-nums}
+.kpi .l{color:var(--muted);font-size:.8rem}
+.bar{height:8px;border-radius:99px;background:#3a2530;overflow:hidden;margin-top:8px}.bar>i{display:block;height:100%;background:var(--green)}
+.two{display:grid;gap:12px}@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.timeline{display:grid;gap:4px;position:relative}
+.ev{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:10px 0;border-bottom:1px dashed #1f344e}
+.ev:last-child{border-bottom:0}
+.ev>*{min-width:0}
+.ev p,.ev strong,td{overflow-wrap:anywhere}
+@media(max-width:480px){.ev{grid-template-columns:74px 1fr;gap:10px}}
+.ev .d{font-variant-numeric:tabular-nums;font-size:.8rem;color:var(--blue);font-weight:700;padding-top:2px}
+.ev strong{display:block}.ev p{margin:3px 0 0;color:var(--muted);font-size:.9rem}
+.ev.hl strong{color:var(--green)}
+.tablewrap{overflow-x:auto;margin:0 -4px}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+table.wide{min-width:520px}
+.two>*,.grid>*,.sys>*{min-width:0}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid #1f344e;vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+td.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sys{display:grid;gap:10px}@media(min-width:760px){.sys{grid-template-columns:repeat(3,1fr)}}
+.sys .card{padding:16px}
+.sys ul{margin:8px 0 0;padding-left:18px;color:#cfe0f3;font-size:.9rem}.sys li{margin:4px 0}
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.person{background:#0c1828;border:1px solid #223650;border-radius:14px;padding:12px}
+.person b{display:block}.person span{color:var(--muted);font-size:.85rem}
+details{border:1px solid #223650;border-radius:12px;background:#0c1828;margin:8px 0}
+summary{cursor:pointer;padding:12px 14px;font-weight:650;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"+";display:inline-block;width:18px;color:var(--blue);font-weight:800}
+details[open] summary:before{content:"–"}
+details p{margin:0;padding:0 14px 14px 32px;color:var(--muted);font-size:.92rem}
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.links a{border:1px solid #365472;background:#142a43;color:var(--text);padding:9px 12px;border-radius:10px;text-decoration:none;font-size:.9rem}
+.links a:hover{background:#1d3b5c}
+.src{font-size:.88rem}.src td:first-child{min-width:170px}
+.notice{border-left:3px solid var(--amber);padding:10px 14px;background:#211d15;border-radius:8px;color:#eadfc9;font-size:.92rem;margin-top:12px}
+.notice.green{border-color:var(--green);background:#11261f;color:#d3f1e3}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+ @media(max-width:600px){table.src{min-width:0}table.src tr:first-child{display:none}table.src tr{display:block;padding:10px 0;border-bottom:1px solid #1f344e}table.src td{display:block;border:0;padding:2px 0}table.src td:first-child{font-weight:650}table.src td:last-child{color:var(--muted);font-size:.8rem}}
+.footer{color:var(--muted);font-size:.8rem;margin-top:26px;text-align:center}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
 </style>
 </head>
-<body><main>
-<header class="top"><div><div class="eyebrow">Public-source status dashboard</div><h1>Project 2026</h1><p class="sub">A public-information tracker for Tableboard Studios and Cruise Ship Simulator. It distinguishes a public project listing from proof of active internal testing.</p></div><div class="stamp">Dashboard build · <span id="today"></span></div></header>
+<body>
+<main>
+
+<header class="top">
+  <div>
+    <div class="eyebrow">Project 2026 · Status Monitor</div>
+    <h1>Project 2026</h1>
+    <p class="sub">A fan-run tracker for <b>Tableboard Studios</b>' next Roblox game, from the team behind <b>Cruise Ship Simulator</b>. Status, timeline, studio info, live game stats and every source, all in one place.</p>
+    <div class="stamp">Last updated <b>28 October 2026</b> · stats read from Roblox's public API that day · <span id="age"></span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#status">Status</a><a href="#overview">Overview</a><a href="#evidence">Evidence</a><a href="#css">CSS stats</a><a href="#timeline">Timeline</a><a href="#systems">Ship systems</a><a href="#studio">Studio</a><a href="#faq">FAQ</a><a href="#sources">Sources</a><a href="#changelog">Changelog</a>
+</nav>
+
+<section class="hero" id="status" aria-label="Headline status">
+  <div class="q">Is Project 2026 in internal testing?</div>
+  <div class="big"><span class="dot" aria-hidden="true"></span><span class="yes">YES</span></div>
+  <p class="what">Internal testing: YES, confirmed</p>
+  <p>Confirmed by the project tracker owner (Zephplays134) on 28 October 2026.</p>
+  <p>Supporting public evidence: a public Roblox creator tracker lists an experience called <b>“Project 2026 Testing Server”</b> (46 visits) and one called <b>“P26 Building Systems Development”</b> (19 visits) among Bryce_TBS's experiences. Bryce_TBS is Tableboard Studios' founder and lead developer.</p>
+  <div class="chips">
+    <span class="tag green">INTERNAL TESTING · YES</span>
+    <span class="tag green">TESTING SERVER EXISTS</span>
+    <span class="tag blue">PUBLIC RELEASE · TO BE ANNOUNCED</span>
+    <span class="tag amber">NO PUBLIC TEST ACCESS ANNOUNCED</span>
+  </div>
+</section>
+
 <div class="grid">
-<article class="card"><div class="label">Is Project 2026 listed as a planned project?</div><div class="value">Yes — secondary listing</div><span class="tag green">LISTED · TO BE ANNOUNCED</span><p class="desc">A Rolimon's listing for the Tableboard Studios group labels “Project 2026 (2026)” as “To be announced.” This supports that it is listed as a planned project, but is not an official developer testing announcement.</p></article>
-<article class="card"><div class="label">Are developers testing it internally right now?</div><div class="value">Not verified publicly</div><span class="tag amber">UNCONFIRMED</span><p class="desc">Google-search results did not surface a reliable official statement confirming internal testing has started. Private testing could be happening, but public sources do not establish that as fact.</p></article>
-<article class="card"><div class="label">Release date / launch window</div><div class="value">Not announced</div><span class="tag blue">AWAITING DETAILS</span><p class="desc">The secondary listing says “To be announced.” No verified release date or quarter was found in the sources checked.</p></article>
-<article class="card"><div class="label">Elevators and ship systems</div><div class="value">Not confirmed</div><span class="tag">AWAITING DEVELOPER DETAILS</span><p class="desc">Elevator types, PA systems, and other mechanics should remain unconfirmed until a developer publishes specifics.</p></article>
+  <article class="card"><div class="label">Internal testing</div><div class="value">Yes, confirmed</div><span class="tag green">CONFIRMED</span><p class="desc">Confirmed by the tracker owner. A “Project 2026 Testing Server” experience is publicly listed (rotraces.com, read 28 Oct 2026).</p></article>
+  <article class="card"><div class="label">Official studio listing</div><div class="value">“Project 2026 (2026)”</div><span class="tag blue">TO BE ANNOUNCED</span><p class="desc">The official Tableboard Studios Roblox group lists it under <i>Current Games</i> as “To be announced.”</p></article>
+  <article class="card"><div class="label">Lead developer's profile</div><div class="value">Current project</div><span class="tag green">ACTIVE</span><p class="desc">Bryce_TBS's Roblox profile lists “Project 2026” first under <i>Current Projects</i>, ahead of Cruise Ship Simulator.</p></article>
+  <article class="card"><div class="label">Release date</div><div class="value">Not announced</div><span class="tag amber">AWAITING DATE</span><p class="desc">No release date, quarter or public-test date has been published in any source checked. The listing only says “(2026)”.</p></article>
 </div>
-<section class="section"><h2>Google search status summary</h2><div class="timeline">
-<div class="item"><strong>Project existence / plans</strong><p>Search surfaced a secondary Tableboard Studios group listing naming “Project 2026 (2026)” and saying “To be announced.” This is evidence of a public listing, not proof of the current development stage.</p></div>
-<div class="item"><strong>Internal testing</strong><p>No reliable official public confirmation found in this search. Status: UNCONFIRMED — do not label “Yes, testing” without a developer statement or official test announcement.</p></div>
-<div class="item"><strong>Official projects page</strong><p>The accessible Tableboard Studios projects page does not currently show Project 2026 in its visible project descriptions. This differs from the secondary group listing, so the dashboard identifies the source type clearly.</p></div>
-<div class="item"><strong>What would confirm testing?</strong><p>A dated official Tableboard Studios announcement, developer post, or official test-access notice explicitly stating that Project 2026 testing has started.</p></div>
-</div></section>
-<section class="section"><h2>Sources to recheck</h2><p class="desc">These links are useful for public updates. This page does not access private developer servers, private messages, or internal builds, and it does not automatically search Google in the background.</p><div class="links">
-<a href="https://www.roblox.com/communities/4795028/Tableboard-Studios#!/about" target="_blank" rel="noopener noreferrer">Official Roblox group</a>
-<a href="https://www.roblox.com/games/17234598656/Cruise-Ship-Simulator" target="_blank" rel="noopener noreferrer">Cruise Ship Simulator</a>
-<a href="https://sites.google.com/view/tableboardstudios/projects" target="_blank" rel="noopener noreferrer">Official projects page</a>
-<a href="https://www.rolimons.com/group/4795028" target="_blank" rel="noopener noreferrer">Rolimon's listing · secondary source</a>
-<a href="https://www.google.com/search?q=Tableboard+Studios+Project+2026+internal+testing" target="_blank" rel="noopener noreferrer">Repeat Google search</a>
-</div></section>
-<section class="section"><h2>Verification checklist</h2><ul><li>Check whether a new official developer announcement mentions Project 2026.</li><li>Only mark internal testing “YES” if a reliable official source explicitly confirms it.</li><li>Record a release date only after an official announcement.</li><li>Add elevator types, PA announcements, or ship-system features only when supported by a reliable source.</li></ul><div class="notice"><strong>Accuracy note:</strong> “Not publicly confirmed” does not mean “definitely not testing.” It means the available public evidence is insufficient to confirm yes.</div></section>
-<div class="footer">Last reviewed: 17 October 2026. Search found a secondary listing for Project 2026 marked “To be announced”; no reliable official internal-testing confirmation was found. Secondary listings may be incomplete or outdated.</div>
-</main><script>document.getElementById('today').textContent=new Date().toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});</script></body></html>
+
+<section class="section" id="overview">
+  <h2><span class="num">01</span>Project overview</h2>
+  <div class="two">
+    <div>
+      <p style="margin-top:0">Project 2026 is the next game from <b>Tableboard Studios</b>, a Roblox studio making maritime simulators. It sits next to their live game, <b>Cruise Ship Simulator</b> (CSS), on the studio's official list of current games.</p>
+      <p>The studio hasn't revealed the official name, genre details or the feature list. What the public record shows: the project exists, it's labeled 2026, it's the lead developer's top current project, and there's a dedicated testing server plus a separate “building systems” development place.</p>
+    </div>
+    <div class="tablewrap"><table>
+      <tr><th>Field</th><th>Value</th></tr>
+      <tr><td>Working title</td><td>Project 2026 (internal shorthand “P26”)</td></tr>
+      <tr><td>Studio</td><td>Tableboard Studios (Roblox group 4795028)</td></tr>
+      <tr><td>Lead developer</td><td>Bryce_TBS: founder, CEO and lead developer</td></tr>
+      <tr><td>Internal testing</td><td><span class="tag green">YES</span></td></tr>
+      <tr><td>Public release</td><td><span class="tag blue">TBA</span></td></tr>
+      <tr><td>Sister game</td><td>Cruise Ship Simulator (live, in beta)</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="section" id="evidence">
+  <h2><span class="num">02</span>Evidence board</h2>
+  <div class="legend"><span class="tag green">OFFICIAL</span><span class="tag blue">THIRD-PARTY DATA</span><span class="tag amber">OWNER-CONFIRMED</span></div>
+  <div class="timeline">
+    <div class="ev hl"><div class="d">Owner</div><div><strong>Internal testing confirmed: YES</strong><p><span class="tag amber">OWNER-CONFIRMED</span> The repository owner (Zephplays134) confirmed internal testing on 28 Oct 2026. This dashboard's headline reflects that confirmation.</p></div></div>
+    <div class="ev hl"><div class="d">Tracker</div><div><strong>“Project 2026 Testing Server”: 46 visits</strong><p><span class="tag blue">THIRD-PARTY DATA</span> Listed on rotraces.com's profile for Bryce_TBS, read 28 Oct 2026. A low visit count fits a closed, internal test server.</p></div></div>
+    <div class="ev"><div class="d">Tracker</div><div><strong>“P26 Building Systems Development”: 19 visits</strong><p><span class="tag blue">THIRD-PARTY DATA</span> Same source. Points to a separate place used to build the game's systems.</p></div></div>
+    <div class="ev"><div class="d">Roblox</div><div><strong>Official group: “Project 2026 (2026) · To be announced.”</strong><p><span class="tag green">OFFICIAL</span> Tableboard Studios group description, read 28 Oct 2026 through Roblox's public API.</p></div></div>
+    <div class="ev"><div class="d">Roblox</div><div><strong>Bryce_TBS profile: “CURRENT PROJECTS · Project 2026 · Cruise Ship Simulator”</strong><p><span class="tag green">OFFICIAL</span> Lead developer's own Roblox profile, read 28 Oct 2026.</p></div></div>
+    <div class="ev"><div class="d">Web</div><div><strong>Studio projects page doesn't mention Project 2026 yet</strong><p><span class="tag green">OFFICIAL</span> sites.google.com/view/tableboardstudios/projects only covers Cruise Line Simulator: A New Era and Classic (read 28 Oct 2026). The page looks out of date.</p></div></div>
+  </div>
+  <div class="notice">An official public announcement of testing (a group shout, Discord post or game-page note) hasn't been found. The YES on this page comes from the owner's confirmation, backed by the publicly listed testing server.</div>
+</section>
+
+<section class="section" id="css">
+  <h2><span class="num">03</span>Cruise Ship Simulator: live stats</h2>
+  <p class="desc" style="margin:0 0 12px">Read from Roblox's public games API on 28 Oct 2026. These are a snapshot; the numbers move every day.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="n">6,263,487</div><div class="l">Visits</div></div>
+    <div class="kpi"><div class="n">35,378</div><div class="l">Favorites</div></div>
+    <div class="kpi"><div class="n">77.5%</div><div class="l">Like ratio (9,625 👍 / 2,797 👎)</div><div class="bar"><i style="width:77.5%"></i></div></div>
+    <div class="kpi"><div class="n">46,452</div><div class="l">Group members</div></div>
+  </div>
+  <div class="tablewrap" style="margin-top:14px"><table>
+    <tr><th>Field</th><th>Value</th></tr>
+    <tr><td>Last updated (game)</td><td>26 Oct 2026</td></tr>
+    <tr><td>Created</td><td>21 Apr 2024</td></tr>
+    <tr><td>Players online at read</td><td>35</td></tr>
+    <tr><td>Max players per server</td><td>15</td></tr>
+    <tr><td>Genre</td><td>Simulation › Vehicle Sim</td></tr>
+    <tr><td>Stage</td><td>“Currently in BETA stages and is a Work in Progress” (game description)</td></tr>
+    <tr><td>Regions</td><td>Mediterranean and Bahamas ports; Grand Cayman (badge)</td></tr>
+  </table></div>
+  <div class="links"><a href="https://www.roblox.com/games/17234598656/Cruise-Ship-Simulator" target="_blank" rel="noopener">Play Cruise Ship Simulator ↗</a></div>
+</section>
+
+<section class="section" id="timeline">
+  <h2><span class="num">04</span>Timeline</h2>
+  <div class="timeline">
+    <div class="ev"><div class="d">May 2021</div><div><strong>Cruise Line Simulator: Classic development begins</strong><p>Per the studio's projects page. The Roblox experience was created 15 May 2021.</p></div></div>
+    <div class="ev"><div class="d">Nov 2022</div><div><strong>Cruise Line Simulator: A New Era development begins</strong><p>Started after Bryce_TBS's cruise on the Disney Wonder (projects page). Experience created 28 Dec 2022.</p></div></div>
+    <div class="ev"><div class="d">21 Apr 2024</div><div><strong>Cruise Ship Simulator created</strong><p>Alpha and Beta Player badges added 26 Apr 2024.</p></div></div>
+    <div class="ev"><div class="d">Dec 2024</div><div><strong>Earnings badges and “Meet the devs” badges added</strong><p>Millionaire / Hundredmillionaire badges on 13 Dec, Meet Bryce/Nick/Austin/Ryland on 14 Dec. A New Era last updated 3 Dec 2024; it's now listed as discontinued.</p></div></div>
+    <div class="ev"><div class="d">2 Feb 2025</div><div><strong>Triton Class badge</strong><p>“You Own the Legendary Triton Class!”</p></div></div>
+    <div class="ev"><div class="d">9 Aug 2025</div><div><strong>Oasis Class badge</strong><p>“The Symphony of Your Fleet.”</p></div></div>
+    <div class="ev"><div class="d">7 Sep 2025</div><div><strong>Billionaire badge</strong><p>Unlocks the Njord Class Yacht with 4 musical horns.</p></div></div>
+    <div class="ev"><div class="d">20 Dec 2025</div><div><strong>Grand Cayman port badge, new dev badges</strong><p>“You Visited Grand Cayman!”, plus Meet Jouux and Meet Jay Thunder.</p></div></div>
+    <div class="ev"><div class="d">20 Mar 2026</div><div><strong>“The World's Largest Cruise Ship” badge</strong><p>Matches the “World Class Cruise Ship” game pass.</p></div></div>
+    <div class="ev"><div class="d">Apr–May 2026</div><div><strong>Seasonal badges</strong><p>April Fools ship (6 Apr), Spirit of ’76 Langley Award (29 Apr), America 250 (5 May).</p></div></div>
+    <div class="ev"><div class="d">26 Oct 2026</div><div><strong>Cruise Ship Simulator updated</strong><p>Latest update time on the Roblox game record.</p></div></div>
+    <div class="ev hl"><div class="d">28 Oct 2026</div><div><strong>Project 2026 internal testing: YES</strong><p>Confirmed by the tracker owner. Testing server publicly listed.</p></div></div>
+    <div class="ev"><div class="d">2026 · TBA</div><div><strong>Project 2026 public release</strong><p>Official listing: “To be announced.”</p></div></div>
+  </div>
+  <p class="desc">Dates come from Roblox's own records (experience and badge creation/update times) and the studio's projects page. Badge dates show when a badge was created, which can be before the update it shipped with.</p>
+</section>
+
+<section class="section" id="systems">
+  <h2><span class="num">05</span>Elevators & ship systems</h2>
+  <div class="legend"><span class="tag green">KNOWN · IN CSS TODAY</span><span class="tag blue">KNOWN · P26 DEV PLACE</span><span class="tag red">NOT PUBLICLY CONFIRMED</span></div>
+  <div class="sys">
+    <div class="card"><h3>Project 2026</h3><span class="tag blue">KNOWN</span>
+      <ul><li>A dedicated testing server exists</li><li>A separate “Building Systems Development” place exists</li><li>The feature list hasn't been published</li></ul>
+      <span class="tag red" style="margin-top:10px">ELEVATORS · UNCONFIRMED</span>
+      <p class="desc">No public source mentions elevators, PA systems or walkable decks for Project 2026 yet. They'll go here once the studio shows them.</p>
+    </div>
+    <div class="card"><h3>CSS ship systems (game passes)</h3><span class="tag green">KNOWN</span>
+      <ul><li>Autopilot</li><li>1.25x Ship Speed</li><li>Tug & Tow Endorsement</li><li>LNG Operator Endorsement</li><li>Helicopter Pack</li><li>Fireworks & Sailaway Party</li><li>Custom Ship TV Screens (videos & images)</li><li>Custom Flags</li><li>Extra Ship Slot</li><li>Elite Captain · 1.4x Income Boost</li></ul>
+    </div>
+    <div class="card"><h3>CSS fleet (named in-game)</h3><span class="tag green">KNOWN</span>
+      <ul><li>Allegra Class · Vista Class</li><li>Dream · Quantum · Adventure Class</li><li>Oasis Class</li><li>Triton Class (legendary)</li><li>World Class (largest ship)</li><li>Njord Class Yacht · Seabreeze Class Yacht</li><li>20th Century Ocean Liners · Bathliner</li></ul>
+    </div>
+  </div>
+  <div class="tablewrap" style="margin-top:14px"><table>
+    <tr><th>CSS game pass</th><th style="text-align:right">Robux</th></tr>
+    <tr><td>Triton Class</td><td class="r">4,999</td></tr>
+    <tr><td>World Class Cruise Ship</td><td class="r">1,620</td></tr>
+    <tr><td>1.4x Income Boost</td><td class="r">1,499</td></tr>
+    <tr><td>Adventure Class</td><td class="r">1,350</td></tr>
+    <tr><td>Quantum Class Cruise Ship</td><td class="r">999</td></tr>
+    <tr><td>Ronard Pack</td><td class="r">900</td></tr>
+    <tr><td>Dream Class</td><td class="r">720</td></tr>
+    <tr><td>20th Century Oceanliners · Autopilot · Elite Captain · 1.25x Speed · Tug & Tow · LNG Operator · Extra Ship Slot</td><td class="r">399 each</td></tr>
+    <tr><td>Helicopter Pack · Seabreeze Class Yacht</td><td class="r">199 each</td></tr>
+    <tr><td>Fireworks & Sailaway Party · Custom TV Screens · Admiral's Starter Fleet</td><td class="r">80 each</td></tr>
+  </table></div>
+  <p class="desc">Prices from Roblox's game-pass list on 28 Oct 2026. They can change.</p>
+</section>
+
+<section class="section" id="studio">
+  <h2><span class="num">06</span>Tableboard Studios</h2>
+  <p style="margin-top:0">A Roblox studio making maritime games: “enjoyable maritime games you may enjoy for countless hours.” It has <b>46,452 members</b> and is owned by <b>Bryce_TBS</b>. Founded in 2019, according to their Discord and wiki listings.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Game</th><th>Status</th><th style="text-align:right">Visits</th></tr>
+    <tr><td>Project 2026</td><td><span class="tag green">IN TESTING</span></td><td class="r">TBA</td></tr>
+    <tr><td>Cruise Ship Simulator (2025)</td><td><span class="tag blue">LIVE · BETA</span></td><td class="r">6,263,487</td></tr>
+    <tr><td>Cruise Line Simulator: A New Era</td><td><span class="tag">DISCONTINUED</span></td><td class="r">5,384,277</td></tr>
+    <tr><td>Cruise Line Simulator: Classic</td><td><span class="tag">DISCONTINUED</span></td><td class="r">346,739</td></tr>
+  </table></div>
+  <h3 style="margin-top:16px">The team <span class="desc">(from in-game “Meet” badges)</span></h3>
+  <div class="team">
+    <div class="person"><b>Bryce_TBS</b><span>Lead Developer & CEO: programming, UI, ship modeling, operations</span></div>
+    <div class="person"><b>Nick</b><span>Lead Builder & COO: ports, ship implementation, quality control</span></div>
+    <div class="person"><b>Josh</b><span>Community Manager: group operations, ship implementation</span></div>
+    <div class="person"><b>Austin_TBS</b><span>Ship Modeler</span></div>
+    <div class="person"><b>Dxrq1</b><span>New UIs and all future UI</span></div>
+    <div class="person"><b>Wave Guy</b><span>Waves, helicopters, weather</span></div>
+    <div class="person"><b>Arzekiel (Ryland)</b><span>Modeler: ship detailing, ports</span></div>
+    <div class="person"><b>Jouux</b><span>Cruise ship builder</span></div>
+    <div class="person"><b>gt_awsomejos (Jay Thunder)</b><span>Cruise ship builder</span></div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <h2><span class="num">07</span>FAQ</h2>
+  <details open><summary>Is Project 2026 being tested right now?</summary><p>Yes. Internal testing is confirmed by the tracker owner, and a “Project 2026 Testing Server” experience is publicly listed under the lead developer. It's internal, so the public can't join.</p></details>
+  <details><summary>When does it release?</summary><p>Not announced. The official group lists it as “Project 2026 (2026) · To be announced.”</p></details>
+  <details><summary>Can I join the testing?</summary><p>No public test access has been announced. Watch the official group and the studio's Discord.</p></details>
+  <details><summary>Will it have elevators?</summary><p>Unknown. No public source mentions elevators for Project 2026 yet. This page will mark them confirmed only when the studio shows them.</p></details>
+  <details><summary>Is it a sequel to Cruise Ship Simulator?</summary><p>Unconfirmed. Both games are on the studio's current list, and CSS is still being updated (latest 26 Oct 2026). The studio hasn't said how they relate.</p></details>
+  <details><summary>Is this an official Tableboard Studios site?</summary><p>No. This is a fan-run tracker. Official info comes from the Roblox group, the studio's Discord and their social accounts.</p></details>
+</section>
+
+<section class="section" id="sources">
+  <h2><span class="num">08</span>Sources</h2>
+  <div class="tablewrap"><table class="src wide">
+    <tr><th>Source</th><th>What it showed</th><th>Read</th></tr>
+    <tr><td><a href="https://www.roblox.com/communities/4795028/Tableboard-Studios" target="_blank" rel="noopener">Tableboard Studios group</a> (official)</td><td>“Project 2026 (2026) To be announced.” 46,452 members.</td><td>28 Oct 2026</td></tr>
+    <tr><td><a href="https://www.roblox.com/users/127968748/profile" target="_blank" rel="noopener">Bryce_TBS profile</a> (official)</td><td>Project 2026 listed under Current Projects.</td><td>28 Oct 2026</td></tr>
+    <tr><td><a href="https://www.roblox.com/games/17234598656/Cruise-Ship-Simulator" target="_blank" rel="noopener">Cruise Ship Simulator</a> (official)</td><td>Visits, favorites, votes, update date, badges, game passes (via Roblox public API)</td><td>28 Oct 2026</td></tr>
+    <tr><td><a href="https://rotraces.com/Bryce_TBS" target="_blank" rel="noopener">Rotraces: Bryce_TBS</a> (third-party)</td><td>“Project 2026 Testing Server” (46 visits), “P26 Building Systems Development” (19 visits)</td><td>28 Oct 2026</td></tr>
+    <tr><td><a href="https://sites.google.com/view/tableboardstudios/projects" target="_blank" rel="noopener">Studio projects page</a> (official)</td><td>Only CLS: A New Era and Classic, no Project 2026. Dev start dates.</td><td>28 Oct 2026</td></tr>
+    <tr><td><a href="https://www.rolimons.com/group/4795028" target="_blank" rel="noopener">Rolimon's group page</a> (third-party)</td><td>Mirrors the group's “To be announced” listing</td><td>28 Oct 2026 (search)</td></tr>
+    <tr><td>Repository owner</td><td>Internal testing confirmed: YES</td><td>28 Oct 2026</td></tr>
+  </table></div>
+  <div class="links">
+    <a href="https://discord.com/invite/tableboardstudios" target="_blank" rel="noopener">Studio Discord ↗</a>
+    <a href="https://x.com/TBStudiosRBLX" target="_blank" rel="noopener">X @TBStudiosRBLX ↗</a>
+    <a href="https://www.tiktok.com/@tableboard_studios" target="_blank" rel="noopener">TikTok ↗</a>
+    <a href="https://www.youtube.com/@Bryce_TBS" target="_blank" rel="noopener">YouTube: Bryce_TBS ↗</a>
+    <a href="https://tableboard-studios.fandom.com/wiki/Tableboard_Studios_Wiki" target="_blank" rel="noopener">Fandom wiki ↗</a>
+  </div>
+</section>
+
+<section class="section" id="changelog">
+  <h2><span class="num">09</span>Changelog</h2>
+  <div class="timeline">
+    <div class="ev hl"><div class="d">28 Oct 2026</div><div><strong>v2.0: Internal testing set to YES</strong><p>Testing confirmed by the owner. Full redesign: evidence board, live CSS stats, timeline, ship systems, studio and team, FAQ, dated sources.</p></div></div>
+    <div class="ev"><div class="d">17 Oct 2026</div><div><strong>v1.1: Search-findings update</strong><p>Testing marked “not verified publicly”; release “not announced.”</p></div></div>
+    <div class="ev"><div class="d">17 Oct 2026</div><div><strong>v1.0: First dashboard</strong><p>First status page and the Gemini-assisted status review guide.</p></div></div>
+  </div>
+</section>
+
+<div class="footer">Project 2026 Status Monitor · fan-run, not affiliated with Tableboard Studios or Roblox Corporation · Last updated 28 Oct 2026 · <a href="https://github.com/Zephplays134/Elevator202" target="_blank" rel="noopener">GitHub</a></div>
+</main>
+<script>
+(function(){var u=new Date('2026-10-28T12:00:00Z'),d=Math.floor((Date.now()-u)/864e5),el=document.getElementById('age');
+el.textContent=d<=0?'fresh today':(d===1?'1 day ago':d+' days ago');})();
+</script>
+</body>
+</html>

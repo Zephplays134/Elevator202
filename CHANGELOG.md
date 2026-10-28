@@ -1,6 +1,20 @@
 # Changelog
 
-All notable changes to the Project 2026 Status Monitor. Newest first.
+All notable changes to the Elevator202 trackers (Project 2026 Status Monitor and, from v2.1, the Spencer, NY fire tracker). Newest first.
+
+## [2.1.0] - 2026-10-28
+
+### Added
+- **Second tracker: “Spencer, NY grocery store fire — was it an accident?”** at `spencer-fire/` (`spencer-fire/index.html` + `spencer-fire/styles.css`). Headline answer: **NOT DETERMINED**, the cause is under investigation by the Tioga County Fire Investigation Team. Covers the Sept. 11, 2026 fire that destroyed the Shurfine Food Mart, 15 N. Main St., Village of Spencer, NY: key facts, timeline, what officials said, damage and people, store status, community, FAQ and 10 dated sources (reporting through Oct. 10, 2026).
+- **Trackers bar** at the top of `index.html` and a **Trackers** section (plus a nav link) listing both trackers.
+- **Back link** on the Spencer page to the Project 2026 dashboard, and a footer link to this repo.
+- Spencer sources in `docs/SOURCES.md` and the README; v2.1 entry in the in-page changelog.
+
+### Changed
+- README: new “Trackers in this repo” table, a Spencer tracker section, updated repository layout and Pages note.
+
+### Unchanged
+- Every Project 2026 fact, figure and status on `index.html` is exactly as in v2.0.0.
 
 ## [2.0.0] - 2026-10-28
 

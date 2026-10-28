@@ -1,6 +1,9 @@
 # Source log
 
-Every figure on the dashboard comes from one of these, read on the date shown. Nothing is estimated.
+Every figure on the trackers comes from one of these, read on the date shown. Nothing is estimated.
+
+- [Project 2026 Status Monitor](#read-28-october-2026) (`index.html`)
+- [Spencer, NY grocery store fire](#spencer-ny-grocery-store-fire-spencer-fire) (`spencer-fire/index.html`)
 
 ## Read 28 October 2026
 
@@ -44,3 +47,36 @@ Every figure on the dashboard comes from one of these, read on the date shown. N
 ## Not found
 - No official public announcement of Project 2026 testing, release date, trailer or feature list.
 - No public source about elevators, PA systems or walkable decks for Project 2026.
+
+---
+
+# Spencer, NY grocery store fire (`spencer-fire/`)
+
+All sources below were read on **28 October 2026**. The headline answer (“NOT DETERMINED”) is stated only as strongly as these sources allow.
+
+| # | Source | Publisher | Published |
+|---|---|---|---|
+| 1 | [Shur Fine Food Mart burns after afternoon fire in Spencer](https://www.wbng.com/2026/09/11/shur-fine-food-mart-burns-after-afternoon-fire-spencer/) | WBNG 12 News | Sept. 11, 2026 |
+| 2 | [Fire destroys only grocery store in Spencer, sending shockwaves](https://ithacavoice.org/2026/09/fire-destroys-only-grocery-store-in-spencer-sending-shockwaves/) | The Ithaca Voice (Hailea Potter) | Sept. 11, 2026 |
+| 3 | [Massive Fire Tears Through Spencer Shurfine Food Mart Near Middle School](https://www.wicz.com/news/massive-fire-tears-through-spencer-shurfine-food-mart-near-middle-school/article_71a51b73-f861-4ea5-babc-1c7494c95000.html) | WICZ FOX 40 | Sept. 11, 2026 (day of the fire) |
+| 4 | [Fire destroys Spencer's only full-service grocery store](https://www.fingerlakes1.com/2026/09/13/fire-destroys-spencers-only-full-service-grocery-store/) | FingerLakes1.com | Sept. 13, 2026 |
+| 5 | [Letter from Village of Spencer](https://villageofspencer.com/letter-from-village-of-spencer/) | Village of Spencer | Sept. 13, 2026 (date per The Ithaca Voice) |
+| 6 | [Fire destroys Spencer Shurfine Food Mart, cause under investigation](https://www.yahoo.com/news/articles/fire-destroys-spencer-shurefine-food-164315507.html) | Elmira Star-Gazette (via Yahoo News) | Sept. 14, 2026 |
+| 7 | [Village of Spencer loses its only grocery store to fire](https://www.yahoo.com/news/articles/village-spencer-loses-only-grocery-223930675.html) | WETM / MyTwinTiers (via Yahoo News) | Sept. 14, 2026 |
+| 8 | [Town of Spencer recovering after losing only grocery store in fire](https://www.wbng.com/2026/09/14/town-spencer-recovering-after-losing-only-grocery-store-fire/) | WBNG 12 News | Sept. 14, 2026 |
+| 9 | [Spencer Shur Fine Cleanup and Demolition](https://villageofspencer.com/spencer-shur-fine-cleanup-and-demolition/) | Village of Spencer | Oct. 3, 2026 (date per The Ithaca Voice) |
+| 10 | [‘It truly felt like a death’: After Shurfine fire, Spencer community works to fill gaps left behind](https://ithacavoice.org/2026/10/it-truly-felt-like-a-death-after-shurfine-fire-spencer-community-works-to-fill-gaps-left-behind/) | The Ithaca Voice | Oct. 10, 2026 |
+
+### Key quotes on the cause
+- “The origin and cause of the blaze are under investigation by the Tioga County fire investigation team.” (Elmira Star-Gazette, Sept. 14, 2026)
+- “The cause of the fire has not been determined. The Tioga County Fire Investigation Team is currently investigating.” (WETM / MyTwinTiers, Sept. 14, 2026)
+- “The cause of the fire remains under investigation by the Tioga County Fire Investigations Team.” (WBNG 12 News, Sept. 14, 2026)
+- “It’s unknown how the fire started at this time…” (WBNG 12 News, Sept. 11, 2026)
+
+### Left out on purpose
+- One search-result snippet mentioned a “faulty power strip” as the cause of a Spencer fire, but the post could not be opened and does not match this fire's details, so it is **not** used.
+
+### Not found (as of 28 Oct 2026)
+- No on-the-record statement from investigators naming a cause, and no public finding (accidental, incendiary or undetermined) after a finished investigation.
+- No official injury count.
+- No announced rebuild or reopening date.

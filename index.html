@@ -90,6 +90,15 @@ details p{margin:0;padding:0 14px 14px 32px;color:var(--muted);font-size:.92rem}
 .legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
  @media(max-width:600px){table.src{min-width:0}table.src tr:first-child{display:none}table.src tr{display:block;padding:10px 0;border-bottom:1px solid #1f344e}table.src td{display:block;border:0;padding:2px 0}table.src td:first-child{font-weight:650}table.src td:last-child{color:var(--muted);font-size:.8rem}}
 .footer{color:var(--muted);font-size:.8rem;margin-top:26px;text-align:center}
+.trackbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px;font-size:.82rem;color:var(--muted)}
+.trackbar a,.trackbar span.cur{text-decoration:none;border:1px solid #2a4562;border-radius:999px;padding:4px 11px;background:#0f2034;color:#cfe3fa}
+.trackbar span.cur{border-color:#2d6b55;background:#11261f;color:var(--green);font-weight:700}
+.trackbar a:hover{background:#1b3655;color:#fff}
+.trk{display:grid;gap:12px}@media(min-width:760px){.trk{grid-template-columns:1fr 1fr}}
+.trk>*{min-width:0}
+.trk a.card{display:block;text-decoration:none;color:var(--text)}
+.trk a.card:hover{border-color:#3d6488}
+.trk .go{color:#91caff;font-size:.9rem;font-weight:650;margin-top:10px;display:inline-block}
 .top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
 </style>
 </head>
@@ -98,6 +107,7 @@ details p{margin:0;padding:0 14px 14px 32px;color:var(--muted);font-size:.92rem}
 
 <header class="top">
   <div>
+    <nav class="trackbar" aria-label="Trackers"><b>Trackers:</b><span class="cur" aria-current="page">Project 2026</span><a href="spencer-fire/index.html">Spencer, NY store fire</a></nav>
     <div class="eyebrow">Project 2026 · Status Monitor</div>
     <h1>Project 2026</h1>
     <p class="sub">A fan-run tracker for <b>Tableboard Studios</b>' next Roblox game, from the team behind <b>Cruise Ship Simulator</b>. Status, timeline, studio info, live game stats and every source, all in one place.</p>
@@ -106,7 +116,7 @@ details p{margin:0;padding:0 14px 14px 32px;color:var(--muted);font-size:.92rem}
 </header>
 
 <nav class="toc" aria-label="Sections">
-  <a href="#status">Status</a><a href="#overview">Overview</a><a href="#evidence">Evidence</a><a href="#css">CSS stats</a><a href="#timeline">Timeline</a><a href="#systems">Ship systems</a><a href="#studio">Studio</a><a href="#faq">FAQ</a><a href="#sources">Sources</a><a href="#changelog">Changelog</a>
+  <a href="#status">Status</a><a href="#trackers">Trackers</a><a href="#overview">Overview</a><a href="#evidence">Evidence</a><a href="#css">CSS stats</a><a href="#timeline">Timeline</a><a href="#systems">Ship systems</a><a href="#studio">Studio</a><a href="#faq">FAQ</a><a href="#sources">Sources</a><a href="#changelog">Changelog</a>
 </nav>
 
 <section class="hero" id="status" aria-label="Headline status">
@@ -129,6 +139,14 @@ details p{margin:0;padding:0 14px 14px 32px;color:var(--muted);font-size:.92rem}
   <article class="card"><div class="label">Lead developer's profile</div><div class="value">Current project</div><span class="tag green">ACTIVE</span><p class="desc">Bryce_TBS's Roblox profile lists “Project 2026” first under <i>Current Projects</i>, ahead of Cruise Ship Simulator.</p></article>
   <article class="card"><div class="label">Release date</div><div class="value">Not announced</div><span class="tag amber">AWAITING DATE</span><p class="desc">No release date, quarter or public-test date has been published in any source checked. The listing only says “(2026)”.</p></article>
 </div>
+
+<section class="section" id="trackers">
+  <h2><span class="num">+</span>Trackers in this repo</h2>
+  <div class="trk">
+    <div class="card"><div class="label">Tracker 1 · this page</div><h3>Project 2026 Status Monitor</h3><span class="tag green">INTERNAL TESTING · YES</span><p class="desc">Tableboard Studios' next Roblox game, from the team behind Cruise Ship Simulator.</p></div>
+    <a class="card" href="spencer-fire/index.html"><div class="label">Tracker 2 · new in v2.1</div><h3>Spencer, NY grocery store fire — was it an accident?</h3><span class="tag amber">CAUSE · NOT DETERMINED</span><p class="desc">The Shurfine Food Mart fire in the Village of Spencer, Tioga County, NY, on Sept. 11, 2026. Under investigation by the Tioga County Fire Investigation Team. Timeline, what officials said, store status and dated sources.</p><span class="go">Open tracker →</span></a>
+  </div>
+</section>
 
 <section class="section" id="overview">
   <h2><span class="num">01</span>Project overview</h2>
@@ -295,7 +313,8 @@ details p{margin:0;padding:0 14px 14px 32px;color:var(--muted);font-size:.92rem}
 <section class="section" id="changelog">
   <h2><span class="num">09</span>Changelog</h2>
   <div class="timeline">
-    <div class="ev hl"><div class="d">28 Oct 2026</div><div><strong>v2.0: Internal testing set to YES</strong><p>Testing confirmed by the owner. Full redesign: evidence board, live CSS stats, timeline, ship systems, studio and team, FAQ, dated sources.</p></div></div>
+    <div class="ev hl"><div class="d">28 Oct 2026</div><div><strong>v2.1: Second tracker added</strong><p>New tracker: “Spencer, NY grocery store fire — was it an accident?” (<a href="spencer-fire/index.html">spencer-fire/</a>). Trackers bar and section added to this page. Project 2026 facts unchanged.</p></div></div>
+    <div class="ev"><div class="d">28 Oct 2026</div><div><strong>v2.0: Internal testing set to YES</strong><p>Testing confirmed by the owner. Full redesign: evidence board, live CSS stats, timeline, ship systems, studio and team, FAQ, dated sources.</p></div></div>
     <div class="ev"><div class="d">17 Oct 2026</div><div><strong>v1.1: Search-findings update</strong><p>Testing marked “not verified publicly”; release “not announced.”</p></div></div>
     <div class="ev"><div class="d">17 Oct 2026</div><div><strong>v1.0: First dashboard</strong><p>First status page and the Gemini-assisted status review guide.</p></div></div>
   </div>

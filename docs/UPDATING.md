@@ -27,6 +27,14 @@ Like ratio = up ÷ (up + down) × 100.
 - Sources table read dates: `#sources`
 - Bump **“Last updated”** in the header and footer, and the date in the small script at the bottom (it drives the “x days ago” label).
 
+## 2b. Update the Spencer fire tracker (`spencer-fire/index.html`)
+
+- Check for new reporting on the Shurfine Food Mart fire cause (Tioga County Fire Investigation Team), demolition and any rebuild.
+- If an official cause is announced, quote it with attribution and a date in `#answer` and `#officials`, and change the headline only as far as the source says.
+- Add dated events to `#timeline`, update `#status`, and add the article to `#sources`.
+- Bump “Last updated” in the header and footer.
+- Styles live in `spencer-fire/styles.css`. Keep the back link (`../`) at the top so it returns to the main dashboard.
+
 ## 3. Keep the repo in sync
 
 - Update the status table and snapshot in `README.md`.
